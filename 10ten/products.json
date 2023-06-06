@@ -1,0 +1,10 @@
+{
+    "products": [
+        {
+            "name": "Йоу",
+            "price": 5000,
+            "available": true,
+            "weight": 150
+        }
+    ]
+}

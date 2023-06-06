@@ -1,16 +1,19 @@
-def z3():
-    name = input("vvedite imia:")
-    filename = "dr.jpg"
-    with Image.open(filename) as img:
-        img.load()
-        font = ImageFont.truetype("Sequência.otf", 30)
-        draw_text = ImageDraw.Draw(img)
-        draw_text.text(
-            (img.width // 2 - 100, 15),
-            name + ",pozdravlau!",
-            font=font,
-            fill=('red')
-        )
-        img.show()
-        img.save(name + "birth2.png")
-z3()
+from PIL import Image, ImageFilter, ImageDraw, ImageFont
+
+
+input_name = input()
+inp = input()
+im = Image.open(input_name)
+im_crop = im.crop((10, 700, 400, 900))
+im_crop.save('1' + input_name)
+
+
+font = ImageFont.truetype('nice.ttf', 40)
+dr = ImageDraw.Draw(im)
+dr.text(
+        (0, 0),
+        inp + ', поздравляем!',
+        font=font,
+        fill=('#1C0606'))
+
+im.save('res.png')

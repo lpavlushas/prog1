@@ -1,21 +1,23 @@
-def p3():
-    en_ru = open('en-ru.txt ', encoding="utf-8").read().split('\n')
-    s = {}
-    for i in range(len(en_ru)):
-        en_ru[i] = en_ru[i].split(' - ')
-        s[en_ru[i][0]] = en_ru[i][1:]
-    print(s)
+dct = {}
 
-    s1 = {}
-    for i in s:
-        for k in s[i]:
-            k = k.split(', ')
-            for j in k:
-                if j not in s1:
-                    s1[j] = i
-                else:
-                    s1[j] = s1[j] + ', ' + i
-    s1 = dict(sorted(s1.items()))
-    print(s1)
+with open('en-ru.txt') as f:
+    while True:
+        line = f.readline()
 
-p1(), p2(), p3()
+        if not line:
+            break
+
+        fdata = line.split('-')
+        fdata[0] = fdata[0].lstrip().rstrip()
+
+        for i in fdata[1].split(','):
+            i = i.lstrip().rstrip()
+            if i not in dct:
+                dct[i] = [fdata[0]]
+            else:
+                dct[i].append(fdata[0])
+
+
+with open('ru-en.txt', 'w') as f:
+    for key, value in dct.items():
+        f.write(key + ' - ' + ', '.join(value) + '\n')

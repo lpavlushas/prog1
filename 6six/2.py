@@ -1,20 +1,15 @@
-def z2():
-    och={
-        1 : ['А','В','Е','И','Н','О','Р','С','Т'],
-        2 : ['Д','К','Л','М','П','У'],
-        3 : ['Б', 'Г', 'Ё', 'Ь', 'Я'],
-        4 : ['Й', 'Ы'],
-        5 : ['Ж', 'З', 'Х', 'Ц', 'Ч'],
-        6 : ['Ш', 'Э', 'Ю'],
-        7 : ['Ф', 'Щ', 'Ъ'],
-    }
-    print('n2:')
-    x = input("Vvedite slovo")
-    x=list(x)
-    d=0
-    for i in x:
-        for k in och:
-            if i in och[k]:
-                d+=k
-    print('vashe slovo stoit', d, 'ballov')
-z2()
+cost = {}
+cost['А'] = cost['В'] = cost['Е'] = cost['И'] = cost['Н'] = cost['О'] = cost['Р'] = cost['С'] = cost['Т'] = 1
+cost['Д'] = cost['К'] = cost['Л'] = cost['М'] = cost['П'] = cost['У'] = 2
+cost['Б'] = cost['Г'] = cost['Ё'] = cost['Ь'] = cost['Я'] = 3
+cost['Й'] = cost['Ы'] = 4
+cost['Ж'] = cost['З'] = cost['Ч'] = cost['Ц'] = cost['Х'] = 5
+cost['Ш'] = cost['Э'] = cost['Ю'] = 8
+cost['Ф'] = cost['Щ'] = cost['Ъ'] = 10
+
+a = input()
+d = 0
+for i in a:
+    i = i.upper()
+    d += cost[i]
+print(d)

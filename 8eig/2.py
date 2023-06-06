@@ -1,5 +1,5 @@
 def z2():
-    otk = {"день победы":"9may.jpg", "международный женский день":"8mart.jpg", "новый год":"ng.jpg"}
+    otk = {"день победы":"9may.jpg", "международный женский день":"8mart.jpg", "новый год":"new.jpg"}
     k =input("Какой праздник?")
     if k in otk:
         image = Image.open(otk[k])

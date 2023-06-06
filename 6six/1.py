@@ -1,10 +1,9 @@
 def z1():
     countries={
         "russia" : "moscow",
-        "brazil" : "brazilia",
-        "france" : "paris",
-        "finland" : "helsinki"
-    }
+        "germany" : "berlin",
+        "usa" : "washington",
+        "finland" : "helsinki" }
     print('n1:')
     print("a",countries)
     x=input('Vvedite strany ')

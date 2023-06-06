@@ -11,7 +11,7 @@ def z1():
             for flavor in self.flavors:
                 print(f"Мороженое {flavor}")
 
-    icecreamstand = icecream("ЫЫЫ", "Мороженое", ["Шоколадное", "Ванильное", "Клубничное"])
+    icecreamstand = icecream("", "Мороженое", ["Шоколадное", "Ванильное", "Клубничное"])
     icecreamstand.disp_flavors()
 z1()
 def z2():

@@ -13,13 +13,13 @@ class Restaurant:
         print(f'Новый рейтинг:{self.restaurant_rating}')
 
 
-newRestaurant = Restaurant('Париж','Фастфуд',5)
+newRestaurant = Restaurant('Bomba','Фастфуд',5)
 newRestaurant.describe_restaurant()
 newRestaurant.open_restaurant()
 
-restaurant_1 = Restaurant('Дали','Итальянская',5)
+restaurant_1 = Restaurant('Kitti','Японкая',5)
 restaurant_1.describe_restaurant()
-restaurant_2 = Restaurant('Журавльz','Японская',4)
+restaurant_2 = Restaurant('Grazie','Итальянкая',4)
 restaurant_2.describe_restaurant()
 restaurant_3 = Restaurant('Русь','Русская',4)
 restaurant_3.describe_restaurant()
